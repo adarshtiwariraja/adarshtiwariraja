@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adarsh Tiwari | Logistics & Operations Professional</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#020617;
+            color:white;
+            overflow-x:hidden;
+        }
+
+        /* BACKGROUND EFFECT */
+
+        body::before{
+            content:'';
+            position:fixed;
+            width:500px;
+            height:500px;
+            background:#0ea5e944;
+            border-radius:50%;
+            top:-150px;
+            right:-150px;
+            filter:blur(120px);
+            z-index:-1;
+        }
+
+        body::after{
+            content:'';
+            position:fixed;
+            width:500px;
+            height:500px;
+            background:#2563eb33;
+            border-radius:50%;
+            bottom:-150px;
+            left:-150px;
+            filter:blur(120px);
+            z-index:-1;
+        }
+
+        /* NAVBAR */
+
+        nav{
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:22px 8%;
+            position:fixed;
+            top:0;
+            z-index:1000;
+            background:rgba(2,6,23,0.75);
+            backdrop-filter:blur(12px);
+            border-bottom:1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo{
+            font-size:34px;
+            font-weight:800;
+            background:linear-gradient(to right,#38bdf8,#2563eb);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        nav ul{
+            display:flex;
+            gap:35px;
+            list-style:none;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        nav ul li a:hover{
+            color:#38bdf8;
+        }
+
+        /* HERO SECTION */
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:150px 8% 80px;
+            flex-wrap:wrap;
+            gap:50px;
+        }
+
+        .hero-text{
+            flex:1;
+            min-width:320px;
+        }
+
+        .tag{
+            display:inline-block;
+            padding:12px 24px;
+            border-radius:50px;
+            background:#0f172a;
+            border:1px solid rgba(255,255,255,0.08);
+            color:#38bdf8;
+            margin-bottom:25px;
+            font-size:14px;
+        }
+
+        .hero-text h1{
+            font-size:80px;
+            line-height:1.1;
+            margin-bottom:25px;
+            font-weight:800;
+        }
+
+        .hero-text h1 span{
+            background:linear-gradient(to right,#38bdf8,#2563eb);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .hero-text p{
+            font-size:18px;
+            line-height:2;
+            color:#cbd5e1;
+            max-width:700px;
+            margin-bottom:35px;
+        }
+
+        .hero-buttons{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            padding:16px 36px;
+            border-radius:60px;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.4s;
+            display:inline-block;
+        }
+
+        .btn-primary{
+            background:linear-gradient(to right,#38bdf8,#2563eb);
+            color:white;
+            box-shadow:0px 0px 25px rgba(56,189,248,0.4);
+        }
+
+        .btn-primary:hover{
+            transform:translateY(-6px);
+        }
+
+        .btn-outline{
+            border:2px solid #38bdf8;
+            color:#38bdf8;
+        }
+
+        .btn-outline:hover{
+            background:#38bdf8;
+            color:black;
+            transform:translateY(-6px);
+        }
+
+        /* PROFILE IMAGE */
+
+        .hero-image{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            min-width:320px;
+        }
+
+        .profile-box{
+            width:420px;
+            height:420px;
+            border-radius:50%;
+            padding:8px;
+            background:linear-gradient(135deg,#38bdf8,#2563eb,#0ea5e9);
+            animation:rotate 8s linear infinite;
+            box-shadow:0px 0px 50px rgba(56,189,248,0.35);
+        }
+
+        .profile-box img{
+            width:100%;
+            height:100%;
+            border-radius:50%;
+            object-fit:cover;
+            border:10px solid #020617;
+        }
+
+        @keyframes rotate{
+
+            0%{
+                transform:rotate(0deg);
+            }
+
+            100%{
+                transform:rotate(360deg);
+            }
+
+        }
+
+        /* MARQUEE */
+
+        marquee{
+            background:linear-gradient(to right,#38bdf8,#2563eb);
+            padding:16px;
+            font-size:18px;
+            font-weight:600;
+            color:white;
+        }
+
+        /* COMMON SECTION */
+
+        section{
+            padding:100px 8%;
+        }
+
+        .section-title{
+            text-align:center;
+            font-size:52px;
+            margin-bottom:60px;
+            font-weight:800;
+        }
+
+        .section-title span{
+            color:#38bdf8;
+        }
+
+        /* ABOUT */
+
+        .about-card{
+            background:rgba(15,23,42,0.7);
+            padding:50px;
+            border-radius:30px;
+            line-height:2;
+            font-size:18px;
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+            color:#dbeafe;
+            box-shadow:0px 10px 40px rgba(0,0,0,0.4);
+        }
+
+        /* SKILLS */
+
+        .skills-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+            gap:25px;
+        }
+
+        .skill-card{
+            background:rgba(15,23,42,0.7);
+            padding:40px 30px;
+            border-radius:25px;
+            text-align:center;
+            transition:0.4s;
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+        }
+
+        .skill-card:hover{
+            transform:translateY(-12px);
+            background:linear-gradient(135deg,#38bdf8,#2563eb);
+        }
+
+        .skill-card i{
+            font-size:45px;
+            margin-bottom:20px;
+            color:#38bdf8;
+        }
+
+        .skill-card:hover i{
+            color:white;
+        }
+
+        .skill-card h3{
+            font-size:24px;
+        }
+
+        /* EXPERIENCE */
+
+        .exp-card{
+            background:rgba(15,23,42,0.7);
+            padding:40px;
+            border-radius:25px;
+            margin-bottom:30px;
+            border-left:6px solid #38bdf8;
+            transition:0.4s;
+            border:1px solid rgba(255,255,255,0.08);
+        }
+
+        .exp-card:hover{
+            transform:scale(1.02);
+        }
+
+        .exp-card h2{
+            font-size:30px;
+            margin-bottom:10px;
+        }
+
+        .exp-card h4{
+            color:#38bdf8;
+            margin-bottom:18px;
+        }
+
+        .exp-card p{
+            line-height:2;
+            color:#d1d5db;
+        }
+
+        /* CONTACT */
+
+        .contact-box{
+            max-width:850px;
+            margin:auto;
+            background:rgba(15,23,42,0.7);
+            padding:60px;
+            border-radius:30px;
+            text-align:center;
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+        }
+
+        .contact-box p{
+            font-size:20px;
+            margin:18px 0;
+            color:#dbeafe;
+        }
+
+        .social-icons{
+            margin-top:35px;
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .social-icons a{
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-decoration:none;
+            font-size:24px;
+            color:white;
+            background:linear-gradient(to right,#38bdf8,#2563eb);
+            transition:0.4s;
+        }
+
+        .social-icons a:hover{
+            transform:translateY(-8px) scale(1.1);
+        }
+
+        /* FOOTER */
+
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#010409;
+            color:#94a3b8;
+            border-top:1px solid rgba(255,255,255,0.08);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1000px){
+
+            .hero{
+                flex-direction:column-reverse;
+                text-align:center;
+            }
+
+            .hero-text h1{
+                font-size:58px;
+            }
+
+            .hero-buttons{
+                justify-content:center;
+            }
+
+        }
+
+        @media(max-width:700px){
+
+            nav{
+                flex-direction:column;
+                gap:18px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+                gap:18px;
+            }
+
+            .hero-text h1{
+                font-size:42px;
+            }
+
+            .profile-box{
+                width:300px;
+                height:300px;
+            }
+
+            .section-title{
+                font-size:38px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">Adarsh Tiwari</div>
+
+        <ul>
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <div class="hero">
+
+        <div class="hero-text">
+
+            <div class="tag">
+                Logistics & Operations Management Professional
+            </div>
+
+            <h1>
+
+                Adarsh <span>Tiwari</span>
+
+            </h1>
+
+            <p>
+
+                Experienced in Supply Chain Management,
+                Import Export Operations,
+                Transportation Management,
+                Customs Documentation,
+                MIS Reporting,
+                Vendor Coordination,
+                and Operational Excellence.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="mailto:adarshtiwariraja@gmail.com" class="btn btn-primary">
+
+                    Hire Me
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/adarshtiwariraja"
+                   target="_blank"
+                   class="btn btn-outline">
+
+                    LinkedIn Profile
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="hero-image">
+
+            <div class="profile-box">
+
+                <!-- 
+                    PASTE YOUR DIRECT LINKEDIN PROFILE IMAGE LINK BELOW
+                -->
+
+                <img
+                src="https://media.licdn.com/dms/image/"
+                alt="Adarsh Tiwari">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MARQUEE -->
+
+    <marquee scrollamount="10">
+
+        🚚 Logistics Management |
+        Supply Chain Coordination |
+        Import Export Documentation |
+        Transportation Management |
+        MIS Reporting |
+        Customs Compliance |
+        Vendor Coordination |
+        Inventory Management |
+        Advanced Excel |
+        Operational Excellence 🚚
+
+    </marquee>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h1 class="section-title">
+
+            About <span>Me</span>
+
+        </h1>
+
+        <div class="about-card">
+
+            Results-driven Logistics & Operations Professional with 3+ years of experience
+            in domestic and international logistics,
+            transportation management,
+            customs documentation,
+            inventory control,
+            supply chain coordination,
+            vendor management,
+            and MIS reporting.
+
+            Skilled in import-export operations,
+            shipment coordination,
+            KPI tracking,
+            operational analysis,
+            and process optimization using Advanced Excel
+            and AI-assisted reporting tools.
+
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h1 class="section-title">
+
+            Professional <span>Skills</span>
+
+        </h1>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <h3>Logistics Management</h3>
+
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <h3>Import Export</h3>
+
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>MIS Reporting</h3>
+
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-warehouse"></i>
+
+                <h3>Inventory Control</h3>
+
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-file-contract"></i>
+
+                <h3>Custom Compliance</h3>
+
+            </div>
+
+            <div class="skill-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Vendor Coordination</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <h1 class="section-title">
+
+            Work <span>Experience</span>
+
+        </h1>
+
+        <div class="exp-card">
+
+            <h2>Logistics Officer</h2>
+
+            <h4>Gulshan Polyols Ltd. | March 2025 – Present</h4>
+
+            <p>
+
+                Managing end-to-end domestic and international logistics operations,
+                customs clearance,
+                shipment coordination,
+                transportation execution,
+                tanker movement,
+                vendor handling,
+                MIS reporting,
+                and operational compliance.
+
+            </p>
+
+        </div>
+
+        <div class="exp-card">
+
+            <h2>Logistics Executive</h2>
+
+            <h4>Mepro Technology India Co. Pvt. Ltd. | Oct 2024 – March 2025</h4>
+
+            <p>
+
+                Managed Xiaomi after-sales service logistics,
+                reverse logistics operations,
+                KPI analysis,
+                insurance claims,
+                compliance documentation,
+                and logistics performance reporting.
+
+            </p>
+
+        </div>
+
+        <div class="exp-card">
+
+            <h2>Warehouse & Logistics Executive</h2>
+
+            <h4>Trade Craft India | July 2022 – Oct 2024</h4>
+
+            <p>
+
+                Managed inventory operations,
+                warehouse reporting,
+                stock transfers,
+                invoicing,
+                vendor coordination,
+                and E-Way bill processing.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h1 class="section-title">
+
+            Contact <span>Me</span>
+
+        </h1>
+
+        <div class="contact-box">
+
+            <p><strong>Email:</strong> adarshtiwariraja@gmail.com</p>
+
+            <p><strong>Phone:</strong> +91 9211300288</p>
+
+            <p><strong>Location:</strong> Delhi, India</p>
+
+            <br>
+
+            <a href="mailto:adarshtiwariraja@gmail.com" class="btn btn-primary">
+
+                Send Email
+
+            </a>
+
+            <div class="social-icons">
+
+                <a href="https://www.linkedin.com/in/adarshtiwariraja" target="_blank">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+                <a href="mailto:adarshtiwariraja@gmail.com">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+                <a href="tel:+917703878617">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Adarsh Tiwari | Professional Portfolio Website
+
+    </footer>
+
+</body>
+
+</html>
